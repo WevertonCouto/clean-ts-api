@@ -29,7 +29,7 @@ export class LoginController implements Controller {
         return unhauthorized()
       }
 
-      return ok({})
+      return ok({ acessToken })
     } catch (error) {
       return serverError(error)
     }
