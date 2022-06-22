@@ -1,7 +1,7 @@
 import { Authentication, HttpRequest } from './login-protocols'
 import { LoginController } from './login'
 import { MissingParamError } from '../../errors'
-import { badRequest, serverError, unhauthorized, ok } from '../../helpers/http-helper'
+import { badRequest, serverError, unhauthorized, ok } from '../../helpers/http/http-helper'
 import { Validation } from '../signup/signup-protocols'
 
 interface SutTypes {
