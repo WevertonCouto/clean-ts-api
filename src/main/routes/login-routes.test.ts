@@ -49,5 +49,15 @@ describe('Login routes', () => {
         })
         .expect(200)
     })
+
+    test('Should return 401 on login', async () => {
+      await request(app)
+        .post('/api/login')
+        .send({
+          password: 'any_password',
+          email: 'wevertoncouto@coutodev.com.br'
+        })
+        .expect(401)
+    })
   })
 })
