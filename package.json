@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node dist/main/server.js",
     "build": "rimraf dist && tsc",
-    "dev": "sucrase-node src/main/server.ts",
+    "down": "docker-compose down",
+    "up": "npm run build && docker-compose up -d",
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
     "test:verbose": "jest --passWithNoTests --runInBand --verbose",
     "test:unit": "npm test -- --watch -c jest-unit-config.js",
@@ -37,7 +38,6 @@
     "jest": "^24.9.0",
     "lint-staged": "^9.5.0",
     "rimraf": "^2.6.3",
-    "sucrase": "^3.21.0",
     "supertest": "^6.2.3",
     "ts-jest": "^24.3.0",
     "typescript": "^3.7.4",
