@@ -26,7 +26,7 @@ export class SignUpController implements Controller {
         email,
         password
       })
-      return ok({ accessToken })
+      return ok({ accessToken: accessToken })
     } catch (error) {
       return serverError(error)
     }
